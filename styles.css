@@ -58,8 +58,8 @@ main {
   max-width: 600px;
 }
 
-/* Article Cards */
-article {
+/* .article-card Cards */
+.article-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,12 +72,12 @@ article {
   cursor: pointer;
 }
 
-article:hover {
+.article-card:hover {
   background-color: #6f7d64;
   color: #6f7d64;
 }
 
-article h2 {
+.article-card h2 {
   font-size: 0.9rem;
   color: #6f7d64;
   margin-bottom: 10px;
@@ -85,12 +85,12 @@ article h2 {
   text-shadow: 1px 1px 1px #000000;
 }
 
-article p {
+.article-card p {
   color: #6f7d64;
 }
 
-article:hover h2,
-article:hover p {
+.article-card:hover h2,
+.article-card:hover p {
   color: #333333;
 }
 
@@ -115,11 +115,11 @@ article:hover p {
 }
 
 /* Odd/Even Layout */
-article.odd .image-container {
+.article-card.odd .image-container {
   order: -1;
 }
 
-article.even .image-container {
+.article-card.even .image-container {
   order: 1;
 }
 
@@ -137,7 +137,7 @@ footer {
     height: auto; /* Keeps the aspect ratio intact */
   }
 
-  article {
+  .article-card {
     align-items: flex-start; /* Align the content to the left for better spacing */
   }
 
@@ -145,7 +145,7 @@ footer {
     padding: 20px; /* Adjust padding for better spacing in small screens */
   }
 
-  article .image-container {
+  .article-card .image-container {
     margin-bottom: 10px; /* Add space between the image and the text */
   }
 }
@@ -167,4 +167,19 @@ img {
   text-decoration: none;
   font-size: 0.8rem;
   margin-top: 20px;
+}
+
+.post-article {
+  background-color: #333333;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.post-article:hover {
+  background-color: #6f7d64;
+  color: #333333;
 }
