@@ -1,128 +1,131 @@
 /* Base Styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Press Start 2P', monospace; /* Pixelated font */
-    background-color: #819b6c; /* Apple IIe black background */
-    background-image: linear-gradient(#688253 0.5px, transparent 0.5px), 
-                      linear-gradient(90deg, #688253 0.5px, transparent 0.5px);
-    background-size: 4px 4px; /* Finer grid */
-    color: #6f7d64; /* Softer green */
-    font-size: 10px;
-    line-height: 1.8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  header h1 {
-    font-size: 1.2rem;
-    color: #6f7d64;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  
-    /* Add subtle shadow */
-    text-shadow: 1px 1px 1px #000000;
-  }
-  
-  
-  header .subtitle {
-    font-size: 0.7rem;
-    color: #333333;
-    margin-top: 8px;
-  }
-  
-  /* Blinking Cursor */
-  #cursor {
-    display: inline-block;
-    font-size: inherit;
-    animation: blink 0.8s steps(2) infinite;
-  }
-  
-  /* Blink Animation */
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Main Content */
-  main {
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  /* Article Cards */
-  article {
-    background-color: #333333;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  article:hover {
-    background-color: #6f7d64;
-    color: #6f7d64;
-  }
-  
-  /* Back Link */
-  .back-link a {
-    display: inline-block;
-    color: #333333;
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin-top: 20px;
-  }
-  
-  .back-link a:hover {
-    text-decoration: underline;
-  }
-  
-  article h2 {
-    font-size: 0.9rem;
-    color: #6f7d64; /* Softer green */
-    margin-bottom: 10px;
-    letter-spacing: 1.5px; /* Slightly spaced out for lighter appearance */
-  }
-  
-  article p {
-    color: #6f7d64;
-  }
-  
-  article:hover h2,
-  article:hover p {
-    color: #333333; /* Text matches inverted scheme */
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: auto;
-    text-align: center;
-    color: #333333;
-    font-size: 0.7rem;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  
-  
+body {
+  font-family: 'Press Start 2P', monospace;
+  background-color: #819b6c;
+  background-image: linear-gradient(#688253 0.5px, transparent 0.5px), 
+                    linear-gradient(90deg, #688253 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+  color: #6f7d64;
+  font-size: 10px;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  color: #6f7d64;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+header .subtitle {
+  font-size: 0.7rem;
+  color: #333333;
+  margin-top: 8px;
+}
+
+#cursor {
+  display: inline-block;
+  font-size: inherit;
+  animation: blink 0.8s steps(2) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Article Cards */
+article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+article:hover {
+  background-color: #6f7d64;
+  color: #6f7d64;
+}
+
+article h2 {
+  font-size: 0.9rem;
+  color: #6f7d64;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+article p {
+  color: #6f7d64;
+}
+
+article:hover h2,
+article:hover p {
+  color: #333333;
+}
+
+/* Image Container */
+.image-container {
+  flex: 1;
+  max-width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 80%;
+  height: auto;
+  border-radius: 4px; /* Optional: to make the images more aesthetic */
+}
+
+.text-container {
+  flex: 2;
+  padding: 0 10px;
+}
+
+/* Odd/Even Layout */
+article.odd .image-container {
+  order: -1;
+}
+
+article.even .image-container {
+  order: 1;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: #333333;
+  font-size: 0.7rem;
+}
