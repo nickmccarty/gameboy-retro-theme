@@ -82,6 +82,7 @@ article h2 {
   color: #6f7d64;
   margin-bottom: 10px;
   letter-spacing: 1.5px;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 article p {
@@ -128,4 +129,42 @@ footer {
   text-align: center;
   color: #333333;
   font-size: 0.7rem;
+}
+
+@media (max-width: 400px) {
+  .image-container img {
+    width: 100%; /* Ensures the image takes up more space */
+    height: auto; /* Keeps the aspect ratio intact */
+  }
+
+  article {
+    align-items: flex-start; /* Align the content to the left for better spacing */
+  }
+
+  .text-container {
+    padding: 20px; /* Adjust padding for better spacing in small screens */
+  }
+
+  article .image-container {
+    margin-bottom: 10px; /* Add space between the image and the text */
+  }
+}
+
+hr {
+  border-color: #819b6c;
+  box-shadow: 1px 1px 1px #000000;
+  margin-bottom: 20px;
+}
+
+img {
+  box-shadow: 1px 1px 1px #000000;;
+}
+
+/* Back Link */
+.back-link a {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-top: 20px;
 }
